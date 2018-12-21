@@ -2,6 +2,6 @@ eureka:
   client:
     service-url:
       defaultZone: http://peer1:8761/eureka/  # 指定注册中心的url
-    register-with-eureka: true  # 是否向 Eureka 注册服务。
+    register-with-eureka: true  # 是否向 Eureka 注册服务。ABC的
 server:
   port: 8089
