@@ -4,4 +4,31 @@ eureka:
       defaultZone: http://peer1:8761/eureka/  # 指定注册中心的url
     register-with-eureka: true  # 是否向 Eureka 注册服务。
 server:
-  port: 8087
+  port: 8086
+  
+spring:
+  redis:
+    database: 1
+    host: 106.12.82.84
+    port: 6379
+    password: 123456
+  devtools:
+    restart:
+      enabled: false
+  rabbitmq:
+    host: 106.12.82.84
+    port: 5672
+    username: admin
+    password: 123456
+
+  cloud:
+    bus:
+      enabled: true
+      trace:
+        enabled: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        exclude: bus-refresh
